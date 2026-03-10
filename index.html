@@ -42,13 +42,22 @@
       letter-spacing: 0.5px; margin-bottom: 28px; line-height: 1.3;
     }
     .scene {
+      position: relative;
       display: flex;
       align-items: flex-end;
       justify-content: center;
-      gap: 0;
       margin-bottom: 26px;
+      height: 200px;
     }
-    svg#cake { width: 160px; height: 190px; overflow: visible; flex-shrink: 0; }
+    svg#cake { width: 160px; height: 190px; overflow: visible; flex-shrink: 0; position: relative; z-index: 2; }
+    #dragon-wrap {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 110px;
+      flex-shrink: 0;
+      z-index: 1;
+    }
 
     .flame { transform-origin: 50% 100%; animation: flicker 0.35s ease-in-out infinite alternate; }
     @keyframes flicker {
